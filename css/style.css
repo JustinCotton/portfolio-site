@@ -1,0 +1,410 @@
+/*
+Project Name: Erin Crews Portfolio
+Author: Erin Crews
+Content Strategist in ATL
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+p {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #3f3f3f;
+  line-height: 1.7em;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 1.9em;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+}
+
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+a {
+  text-decoration: none;
+  color: #305666;
+}
+
+a:hover{
+  border-bottom: 2px solid #ffa07a;
+}
+
+.active {
+  border-bottom: 2px solid #ffa07a;
+}
+
+.img-circle {
+   border-radius: 50%;
+   float: left;
+   padding: 50px;
+ }
+
+
+
+/******************************************
+/* HEADER
+/*******************************************/
+
+
+header {
+  height: 500px;
+  background-image: url("images/white_office_cropped.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0;
+  z-index: -1;
+}
+
+nav {
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+nav.white{
+  background-color: #ffffff;
+}
+
+.hamburger {
+  float: right;
+  padding: 15px 30px;
+  font-size: 2em;
+  display: none;
+}
+
+h1.sitetitle {
+  margin: 0;
+  padding: 15px 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  float: left;
+}
+
+.menu {
+  padding: 15px 50px 15px 0px;
+  float: right;
+}
+
+nav li {
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+
+/******************************************
+/* BIO
+/*******************************************/
+
+.bio {
+ padding: 50px 50px 10px 50px;
+}
+
+.biowrapper {
+  padding: 50px 30px 50px 50px;
+  vertical-align: middle;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+}
+
+.biowrapper p {
+  font-size: 17px;
+}
+
+/******************************************
+/* PROJECTS
+/*******************************************/
+
+.projects {
+  padding: 50px 50px 50px 70px;
+}
+
+article {
+  padding: 0 20px;
+}
+
+article img {
+  width: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: normal;
+}
+
+.project-grid {
+  display: block;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.project-grid:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.grid-item {
+  float: left;
+  width: 24%;
+  padding: 15px;
+}
+
+.grid-item:nth-child(4n+1){
+  clear: both;
+}
+
+.project-grid img:hover{
+  opacity: 0.7;
+  z-index: -2;
+}
+
+/******************************************
+/* WRITING
+/*******************************************/
+
+.writing {
+  background-color: #c7ffd7;
+  padding: 50px;
+}
+
+.clips {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 100;
+  color: #000000;
+}
+
+.clips li {
+  padding: 9px 0px;
+}
+
+/******************************************
+/* CONTACT
+/*******************************************/
+
+.contact {
+  padding: 50px;
+  text-align: center;
+}
+
+
+/******************************************
+/* FOOTER
+/*******************************************/
+
+footer {
+  background-color: #7AFFA0;
+  height: 100px;
+  padding: 0 20px 10px 20px;
+  position: relative;
+}
+
+footer::after{
+  clear: both;
+}
+
+footer a {
+  color: inherit;
+}
+
+footer a:hover{
+  color: #a8a8a8;
+}
+
+.copyright {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 40px 0 35px 30px;
+  float: left;
+  margin: 0;
+}
+
+.social {
+  float: right;
+  padding-right: 20px;
+  margin: 0;
+}
+
+.social ul {
+  position: absolute;
+  top:-35px;
+  right: 60px;
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+@media only screen and (max-width: 1380px) {
+
+  .grid-item {
+    width: 32%;
+  }
+
+  .grid-item:nth-child(4n+1){
+    clear:none;
+  }
+
+  .grid-item:nth-child(3n+1){
+    clear:both;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .projects {
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+
+  .img-circle {
+     float:none;
+     display: block;
+     margin-top: 20px;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 20px;
+   }
+
+   header {
+     height: 400px;
+   }
+
+   .bio {
+    padding: 0;
+   }
+
+   .biowrapper {
+     padding: 30px;
+     vertical-align: middle;
+   }
+
+   .writing {
+     padding: 30px;
+   }
+
+   .contact {
+     padding: 30px;
+   }
+
+  .grid-item {
+    width: 49%;
+  }
+
+  .grid-item:nth-child(3n+1){
+    clear:none;
+  }
+
+  .grid-item:nth-child(2n+1){
+    clear:both;
+  }
+
+}
+
+@media only screen and (max-width: 780px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .social ul {
+    right: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 680px) {
+
+  .project-grid {
+    text-align: center;
+  }
+
+  .grid-item {
+    width: 99%;
+  }
+
+  .grid-item:after{
+    clear:both;
+  }
+
+}
+
+@media only screen and (max-width: 580px) {
+  header {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .img-circle {
+     width: 90%;
+   }
+
+   header {
+     height: 200px;
+   }
+
+   .bio {
+     padding: 0;
+   }
+
+   .biowrapper {
+     padding-top: 0;
+   }
+
+   .writing {
+     padding: 30px;
+   }
+}
