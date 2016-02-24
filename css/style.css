@@ -84,7 +84,7 @@ a:hover{
 
 header {
   height: 500px;
-  background-image: url("images/white_office_cropped.jpg");
+  background-image: url("../images/white_office_cropped.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   margin: 0;
